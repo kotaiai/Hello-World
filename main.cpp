@@ -81,7 +81,7 @@ int main()
     {
         for (int j= 0; j<59; j++)
         {
-            if (alph[j]=='!')
+            if (j==52)
             {
                 if(count == 0)
                 {
@@ -89,7 +89,7 @@ int main()
                     count++;
                 }
             }
-            else if (alph[j]=='d')
+            else if (j==3)
             {
                 if(count == 1)
                 {
@@ -97,7 +97,7 @@ int main()
                     count++;
                 }
             }
-            else if (alph[j]=='l')
+            else if (j==11)
             {
                 if(count == 2 || count == 7|| count ==8)
                 {
@@ -105,7 +105,7 @@ int main()
                     count++;
                 }
             }
-            else if (alph[j]=='r')
+            else if (j==17)
             {
                 if(count == 3)
                 {
@@ -113,7 +113,7 @@ int main()
                     count++;
                 }
             }
-            else if (alph[j]=='o')
+            else if (j==14)
             {
                 if(count == 4||count==6)
                 {
@@ -121,7 +121,7 @@ int main()
                     count++;
                 }
             }
-            else if (alph[j]=='W')
+            else if (j==48)
             {
                 if(count == 5)
                 {
@@ -129,7 +129,7 @@ int main()
                     count++;
                 }
             }
-            else if (alph[j]=='e')
+            else if (j==4)
             {
                 if(count == 9)
                 {
@@ -137,7 +137,7 @@ int main()
                     count++;
                 }
             }
-            else if (alph[j]=='H')
+            else if (j==33)
             {
                 if(count == 10)
                 {
