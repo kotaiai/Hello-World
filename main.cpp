@@ -2,7 +2,6 @@
 
 using namespace std;
 
-
 class Hello{
     private:
         struct llist
@@ -15,7 +14,7 @@ class Hello{
     public:
         Hello();
         void push(char val);
-        void pop(char &val);
+        char pop(char &val);
         bool isempty();
 
 };
@@ -46,14 +45,15 @@ void Hello::push(char val)
 
 }
 
-void Hello::pop(char &val)
+char Hello::pop(char &val)
 {
     llist *ntop;
     val = top->input;
     ntop = top->next;
     delete top;
     top = ntop;
-    cout<<val;
+
+    return val;
 
 
 }
@@ -121,7 +121,6 @@ int main()
                     count++;
                 }
             }
-
             else if (alph[j]=='W')
             {
                 if(count == 5)
@@ -148,6 +147,12 @@ int main()
             }
         }
     }
+        for(int i = 0; i<11; i++)
+        {
+            if (i==5)
+                cout<<" ";
+            cout<<world.pop(hw);
+        }
 
     return 0;
 }
