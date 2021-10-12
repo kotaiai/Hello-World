@@ -73,13 +73,13 @@ bool Hello::isempty()
 int main()
 {
     Hello world;
-    char alph[]="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%^&*";
+    char alph[]="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%^&*,";
     char hw;
     int count = 0;
 
     for (int i = 0; i<12; i++)
     {
-        for (int j= 0; j<59; j++)
+        for (int j= 0; j<60; j++)
         {
             if (j==52)
             {
@@ -99,7 +99,7 @@ int main()
             }
             else if (j==11)
             {
-                if(count == 2 || count == 7|| count ==8)
+                if(count == 2 || count == 8|| count ==9)
                 {
                     world.push(alph[j]);
                     count++;
@@ -115,7 +115,7 @@ int main()
             }
             else if (j==14)
             {
-                if(count == 4||count==6)
+                if(count == 4||count==7)
                 {
                     world.push(alph[j]);
                     count++;
@@ -129,15 +129,16 @@ int main()
                     count++;
                 }
             }
-            else if (j==4)
+            else if (j==58)
             {
-                if(count == 9)
+                if(count == 6)
                 {
                     world.push(alph[j]);
                     count++;
                 }
             }
-            else if (j==33)
+
+            else if (j==4)
             {
                 if(count == 10)
                 {
@@ -145,11 +146,19 @@ int main()
                     count++;
                 }
             }
+            else if (j==33)
+            {
+                if(count == 11)
+                {
+                    world.push(alph[j]);
+                    count++;
+                }
+            }
         }
     }
-        for(int i = 0; i<11; i++)
+        for(int i = 0; i<12; i++)
         {
-            if (i==5)
+            if (i==6)
                 cout<<" ";
             cout<<world.pop(hw);
         }
