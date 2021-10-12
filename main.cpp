@@ -73,6 +73,81 @@ bool Hello::isempty()
 int main()
 {
     Hello world;
+    char alph[]="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%^&*";
+    char hw;
+    int count = 0;
+
+    for (int i = 0; i<12; i++)
+    {
+        for (int j= 0; j<59; j++)
+        {
+            if (alph[j]=='!')
+            {
+                if(count == 0)
+                {
+                    world.push(alph[j]);
+                    count++;
+                }
+            }
+            else if (alph[j]=='d')
+            {
+                if(count == 1)
+                {
+                    world.push(alph[j]);
+                    count++;
+                }
+            }
+            else if (alph[j]=='l')
+            {
+                if(count == 2 || count == 7|| count ==8)
+                {
+                    world.push(alph[j]);
+                    count++;
+                }
+            }
+            else if (alph[j]=='r')
+            {
+                if(count == 3)
+                {
+                    world.push(alph[j]);
+                    count++;
+                }
+            }
+            else if (alph[j]=='o')
+            {
+                if(count == 4||count==6)
+                {
+                    world.push(alph[j]);
+                    count++;
+                }
+            }
+
+            else if (alph[j]=='W')
+            {
+                if(count == 5)
+                {
+                    world.push(alph[j]);
+                    count++;
+                }
+            }
+            else if (alph[j]=='e')
+            {
+                if(count == 9)
+                {
+                    world.push(alph[j]);
+                    count++;
+                }
+            }
+            else if (alph[j]=='H')
+            {
+                if(count == 10)
+                {
+                    world.push(alph[j]);
+                    count++;
+                }
+            }
+        }
+    }
 
     return 0;
 }
